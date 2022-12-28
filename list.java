@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
-public class list<type>{
+public class List<type>{
+    //data stuff 
+    public Node root;
+
+
     class Node{
         public type data;
         public Node next;
@@ -13,8 +17,7 @@ public class list<type>{
     
     }
 
-    public Node root;
-    public list(ArrayList<type> args){
+    public List(ArrayList<type> args){
         if(args.size()!=0){
             root = new Node(args.get(0), null);
             Node temp_pointer = root;
@@ -27,5 +30,15 @@ public class list<type>{
                 temp_pointer = temp_pointer.next;
             }
         }
+    }
+    public Iterable<type> getElems(){
+        ArrayList<type> NodeElements = new ArrayList<type>();
+        Node temp = root;
+        while(temp != null){
+            NodeElements.add(0,temp.data);
+            temp = temp.next;
+        }
+        return NodeElements;
+
     }
 }
