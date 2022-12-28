@@ -9,10 +9,9 @@ class j_linkedlist{
 
     public static void main(String[] args) {
         ArrayList<Integer> arguements = new ArrayList<Integer>();
-        arguements.add(50);
 
         arguements.add(10);
-
+        arguements.add(50);
         linkedlist = new List<Integer>(arguements);
         // List<Integer>.Node temp_ptr = linkedlist.root;
         // while(temp_ptr != null){

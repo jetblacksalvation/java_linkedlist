@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class List<type>{
     //data stuff 
     public Node root;
-
+    
 
     class Node{
         public type data;
@@ -33,10 +33,13 @@ public class List<type>{
     }
     public Iterable<type> getElems(){
         ArrayList<type> NodeElements = new ArrayList<type>();
-        Node temp = root;
+        //Node temp = root;
+        Node temp  =root;
+        int count = 0;
         while(temp != null){
-            NodeElements.add(0,temp.data);
+            NodeElements.add(count,temp.data);
             temp = temp.next;
+            count++;
         }
         return NodeElements;
 
